@@ -20,11 +20,6 @@ const createFolders = async (username)=>{
             await rute(rutename)
           }
 
-          // ruteNames.forEach((rutename)=>{
-          //   rute(rutename)
-          // })
-    
-
     } catch (error) {
         console.log(error);
     }
