@@ -6,27 +6,27 @@ import moverArchivo from "./moverArchivo.js";
 
 
 
-const ordenarArchivos = async (username) =>{
+const ordenarArchivos = async (rute) =>{
 
 
 
     try{
-        const files = await readdir(`/Users/${username}/Desktop`)
+        const files = await readdir(`${rute}`)
         
         for(const file of files){
             const ext = path.extname(file)
             if(fileTypes.imagenes.includes(ext)){
                 //mover a imagenes
 
-                await moverArchivo(file,username,"imagenes")
+                await moverArchivo(file,rute,"imagenes")
 
             }else if(fileTypes.videos.includes(ext)){
                 //mover a videos
-                await moverArchivo(file,username,"videos")
+                await moverArchivo(file,rute,"videos")
 
             } else if(fileTypes.documentos.includes(ext)){
                 //mover a documentos
-                await moverArchivo(file,username,"documentos")
+                await moverArchivo(file,rute,"documentos")
 
             }
         }

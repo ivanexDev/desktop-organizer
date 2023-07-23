@@ -1,17 +1,17 @@
 import { mkdir } from "node:fs/promises";
 
-const createFolders = async (username)=>{
+const createFolders = async (rute)=>{
     try {
         const ruteNames = [ "imagenes", "videos", "documentos", "otros"]
 
         const rute = async (rutename)=>{
-           await mkdir(`/Users/${username}/Desktop/archivos-ordenados/${rutename}`, { recursive: true }, (err) => {
+           await mkdir(`${rute}/${rutename}`, { recursive: true }, (err) => {
                 if (err) throw err;
               }); 
         }
 
         // Crea la ruta principal
-        await mkdir(`/Users/${username}/Desktop/archivos-ordenados/`, { recursive: true }, (err) => {
+        await mkdir(`${rute}/archivos-ordenados/`, { recursive: true }, (err) => {
             if (err) throw err;
           }); 
 
