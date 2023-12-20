@@ -26,11 +26,11 @@ https://github.com/ivanexDev/desktop-organizer/assets/86924510/ef0e7f7c-7ac1-4e8
  ```
  //En Mac
 
- node index.js /Users/ivanex/Desktop
+ node index.js -p /Users/ivanex/Desktop
 
 //En Windows
 
-node index.js C:\Users\ivanex\Desktop
+node index.js -p C:\Users\ivanex\Desktop
  ```
 
 ## Arbol de carpetas
