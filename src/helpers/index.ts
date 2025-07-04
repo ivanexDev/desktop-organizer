@@ -1,0 +1,2 @@
+export {inicio} from "./inicio";
+

@@ -1,6 +1,6 @@
 import yargs from "yargs";
 
-const argv = yargs(process.argv.slice(2))
+export const argsv = yargs(process.argv.slice(2))
 .option("p", {
     alias: "path",
     type: "string",
@@ -12,7 +12,7 @@ const argv = yargs(process.argv.slice(2))
         throw "Debes ingresar la ruta de la carpeta que se desea ordenar";
     }
     return true;
-}).argv
+}).parseSync()
     
 
 
@@ -20,4 +20,3 @@ const argv = yargs(process.argv.slice(2))
 
 
 
-    export default argv;
